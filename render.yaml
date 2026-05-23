@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: personal-finance-manager
+    env: docker
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: SESSION_COOKIE_SECURE
+        value: "true"
