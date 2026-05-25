@@ -87,9 +87,9 @@ public class GoalService {
                 MoneyUtils.money(goal.getTargetAmount()),
                 goal.getTargetDate(),
                 goal.getStartDate(),
-                MoneyUtils.money(progress),
-                percentage,
-                MoneyUtils.money(remaining)
+                MoneyUtils.moneyOrZero(progress),
+                MoneyUtils.formatPercentage(percentage),
+                MoneyUtils.moneyOrZero(remaining)
         );
     }
 

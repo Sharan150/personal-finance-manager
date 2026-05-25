@@ -73,7 +73,7 @@ public class ReportService {
 
         income.replaceAll((key, value) -> MoneyUtils.money(value));
         expenses.replaceAll((key, value) -> MoneyUtils.money(value));
-        return new Totals(income, expenses, MoneyUtils.money(totalIncome.subtract(totalExpenses)));
+        return new Totals(income, expenses, MoneyUtils.moneyOrZero(totalIncome.subtract(totalExpenses)));
     }
 
     private record Totals(

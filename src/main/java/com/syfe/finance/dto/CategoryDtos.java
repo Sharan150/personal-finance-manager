@@ -16,7 +16,7 @@ public final class CategoryDtos {
     ) {
     }
 
-    public record CategoryResponse(String name, TransactionType type, boolean isCustom) {
+    public record CategoryResponse(String name, TransactionType type, @com.fasterxml.jackson.annotation.JsonProperty("custom") boolean isCustom) {
     }
 
     public record CategoriesResponse(List<CategoryResponse> categories) {
